@@ -11,16 +11,23 @@ const Products = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
 
-    }, [])
+    }, [cart])
 
     const addToHandle = (product) => {
         const newCard = [...cart, product]
-        console.log(cart, product)
+        // console.log(cart, product)
 
+
+        // if (newCard.length <= 4) {
+        //     setCart(newCard)
+        // }
+        console.log(cart.map(it => console.log(it.id)))
 
         if (newCard.length <= 4) {
+
             setCart(newCard)
         }
+
         else {
             setCart(cart)
             alert("hello")
