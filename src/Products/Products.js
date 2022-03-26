@@ -24,7 +24,7 @@ const Products = () => {
 
         else {
             setCart(cart)
-            alert("hello")
+            alert("Sorry sir,You Can't Shop more than 4 items !!")
         }
     }
 

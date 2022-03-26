@@ -13,7 +13,7 @@ const Product = ({ product, addToHandle }) => {
     return (
         <div className='col-lg-4 mt-4'>
             <Card className='px-3 pt-3 pb-2 ms-3 cardShowdow' style={{ width: '19rem' }}>
-                <Card.Img className='' variant="top" src={img} />
+                <Card.Img width="200px" height="200px" className='' variant="top" src={img} />
                 <Card.Body>
                     <h4>{name}</h4>
                     <h6>Price:{price}</h6>
