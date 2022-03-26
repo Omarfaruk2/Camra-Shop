@@ -10,7 +10,7 @@ const Card = ({ carts, removeHandle, choosen, one }) => {
                 carts.map(cart =>
                     <div className='d-flex justify-content-between mb-1' key={cart.id}>
                         <table className='table table-success'>
-                            <thead className="">
+                            <thead>
                                 <tr className='d-flex align-items-center w-100'>
                                     <th scope="col">{cart.name}</th>
                                     <img height="40px" width="50px" src={cart.img} alt="" />
@@ -21,7 +21,7 @@ const Card = ({ carts, removeHandle, choosen, one }) => {
                 )
             }
             <div className=' mt-3'>
-                <Button onClick={() => choosen()} variant="outline-primary"> <span>CHOOSE 1 FOR YOU</span></Button>
+                <Button onClick={() => choosen()} variant="outline-primary"> <span>CHOOSE 1 FOR You</span></Button>
                 {
                     <h6 className='mt-3 text-info bg-secondary p-2 m-0'>Speacial one:{one}</h6>
                 }
