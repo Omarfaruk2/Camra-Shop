@@ -2,10 +2,10 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 import "./Card.css"
 
-const Card = ({ carts, removeHandle }) => {
-
+const Card = ({ carts, removeHandle, choosen, one }) => {
+    console.log(one)
     return (
-        <div className='card p-3 mt-3 shadows'>
+        <div className='card p-3 mt-3 shadows sticky-top'>
             <h3 className='fw-bold text-center text-success'>Selected Items</h3>
             {
                 carts.map(cart =>
@@ -16,12 +16,12 @@ const Card = ({ carts, removeHandle }) => {
                 )
             }
             <div className=' mt-5'>
-                <Button variant="outline-primary"> <span>CHOOSE 1 FOR ME</span></Button>
-                <Button className='mt-2' onClick={() => removeHandle(removeHandle)} variant="outline-danger"><span>CHOOSE AGAIN</span></Button>
+                <Button onClick={() => choosen()} variant="outline-primary"> <span>CHOOSE 1 FOR ME</span></Button>
+                <h5 className='mt-3'>Lucy:{one}</h5>
+                <Button className='mt-2' onClick={() => removeHandle()} variant="outline-danger"><span>CHOOSE AGAIN</span></Button>
             </div>
 
         </div>
     )
 }
-
 export default Card

@@ -6,25 +6,19 @@ import "./Products.css"
 const Products = () => {
     const [products, setProducts] = useState([])
     const [cart, setCart] = useState([])
+    const [one, setOne] = useState([])
+
     useEffect(() => {
         fetch("data.json")
             .then(res => res.json())
             .then(data => setProducts(data))
 
-    }, [cart])
+    }, [])
 
     const addToHandle = (product) => {
         const newCard = [...cart, product]
-        // console.log(cart, product)
-
-
-        // if (newCard.length <= 4) {
-        //     setCart(newCard)
-        // }
-        console.log(cart.map(it => console.log(it.id)))
 
         if (newCard.length <= 4) {
-
             setCart(newCard)
         }
 
@@ -32,11 +26,23 @@ const Products = () => {
             setCart(cart)
             alert("hello")
         }
+    }
+
+    const remove = () => {
+        setCart([])
+        setOne([])
+    }
+
+    // -----=======----------------choose one----=======------
+
+    const choose = () => {
+        const random = Math.floor(Math.random() * cart.length)
+        // console.log(random, cart[random])
+        let good = cart[random].name
+        setOne(good)
 
     }
-    const removeHandle = (removeHandle) => {
-        setCart([])
-    }
+    // console.log(one)
 
     return (
         <div className='row mx-0 bg-light'>
@@ -51,7 +57,9 @@ const Products = () => {
             </div>
             <div className='col-lg-3 mt-2 fix'>
                 <Card
-                    removeHandle={removeHandle}
+                    one={one}
+                    choosen={choose}
+                    removeHandle={remove}
                     carts={cart}
                 />
             </div>
