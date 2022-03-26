@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import "./Product.css"
 const Product = ({ product, addToHandle }) => {
-    // console.log(product)
     const { img, price, name } = product
 
 
@@ -13,7 +12,7 @@ const Product = ({ product, addToHandle }) => {
     return (
         <div className='col-lg-4 mt-4'>
             <Card className='px-3 pt-3 pb-2 w-100 cardShowdow' style={{ width: '19rem' }}>
-                <Card.Img width="150px" height="150px" className='' variant="top" src={img} />
+                <Card.Img width="150px" height="190px" className='' variant="top" src={img} />
                 <Card.Body>
                     <h4>{name}</h4>
                     <h6>Price:{price}</h6>

@@ -24,7 +24,7 @@ const Products = () => {
 
         else {
             setCart(cart)
-            alert("Sorry sir,You Can't Shop more than 4 items !!")
+            alert("Sorry sir,You Can't Shop more than 4 Camras !!")
         }
     }
 
@@ -41,7 +41,6 @@ const Products = () => {
         setEachProcuct(item)
 
     }
-    // console.log(one)
 
     return (
         <div className='row mx-0 bg-light'>
