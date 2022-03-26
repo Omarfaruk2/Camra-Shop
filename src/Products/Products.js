@@ -6,7 +6,7 @@ import "./Products.css"
 const Products = () => {
     const [products, setProducts] = useState([])
     const [cart, setCart] = useState([])
-    const [one, setOne] = useState([])
+    const [eachproduct, setEachProcuct] = useState([])
 
     useEffect(() => {
         fetch("data.json")
@@ -30,16 +30,15 @@ const Products = () => {
 
     const remove = () => {
         setCart([])
-        setOne([])
+        setEachProcuct([])
     }
 
     // -----=======----------------choose one----=======------
 
     const choose = () => {
         const random = Math.floor(Math.random() * cart.length)
-        // console.log(random, cart[random])
-        let good = cart[random].name
-        setOne(good)
+        let item = cart[random].name
+        setEachProcuct(item)
 
     }
     // console.log(one)
@@ -57,7 +56,7 @@ const Products = () => {
             </div>
             <div className='col-lg-3 mt-2 fix'>
                 <Card
-                    one={one}
+                    one={eachproduct}
                     choosen={choose}
                     removeHandle={remove}
                     carts={cart}

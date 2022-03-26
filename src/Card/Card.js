@@ -10,8 +10,16 @@ const Card = ({ carts, removeHandle, choosen, one }) => {
             {
                 carts.map(cart =>
                     <div className='d-flex justify-content-between mb-2' key={cart.id}>
-                        <h5>Name:{cart.name}</h5>
+                        <h5>{cart.name}</h5>
                         <img height="40px" width="60px" src={cart.img} alt="" />
+                        {/* ------------------- */}
+                        {/* <table className='table table-success'>
+                            <thead className="">
+                                <tr>
+                                    <th scope="col">{cart.name}</th>
+                                </tr>
+                            </thead>
+                        </table> */}
                     </div>
                 )
             }

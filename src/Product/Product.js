@@ -12,15 +12,15 @@ const Product = ({ product, addToHandle }) => {
 
     return (
         <div className='col-lg-4 mt-4'>
-            <Card className='px-3 pt-3 pb-2 ms-3 cardShowdow' style={{ width: '19rem' }}>
-                <Card.Img width="200px" height="200px" className='' variant="top" src={img} />
+            <Card className='px-3 pt-3 pb-2 w-100 cardShowdow' style={{ width: '19rem' }}>
+                <Card.Img width="150px" height="150px" className='' variant="top" src={img} />
                 <Card.Body>
                     <h4>{name}</h4>
                     <h6>Price:{price}</h6>
                     <Button
                         onClick={() => addToHandle(product)}
 
-                        className='w-100 ' variant="outline-success"><span className='text-warning'>Add TO Cart
+                        className='w-100' variant="outline-success"><span className='text-warning'>Add TO Cart
                             <FontAwesomeIcon className='ms-3' icon={faShoppingCart}></FontAwesomeIcon>
                         </span></Button>
 
