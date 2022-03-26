@@ -3,22 +3,28 @@ import React from 'react'
 import { Card, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-
-const Product = ({ product }) => {
-    console.log(product)
+import "./Product.css"
+const Product = ({ product, addToHandle }) => {
+    // console.log(product)
     const { img, price, name } = product
+
+
+
     return (
-        <div className='col-lg-4 mt-3'>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img className='p-3' variant="top" src={img} />
+        <div className='col-lg-4 mt-4'>
+            <Card className='p-3 ms-3 cardShowdow' style={{ width: '19rem' }}>
+                <Card.Img className='' variant="top" src={img} />
                 <Card.Body>
                     <h4>{name}</h4>
                     <h5>Price:{price}</h5>
-                    <Button className='w-100' variant="outline-success"><span className='text-warning'>Add TO Cart
-                        <FontAwesomeIcon className='ms-3' icon={faShoppingCart}></FontAwesomeIcon>
-                    </span></Button>
+                    <Button
+                        onClick={() => addToHandle(product)}
 
-                </Card.Body>~
+                        className='w-100' variant="outline-success"><span className='text-warning'>Add TO Cart
+                            <FontAwesomeIcon className='ms-3' icon={faShoppingCart}></FontAwesomeIcon>
+                        </span></Button>
+
+                </Card.Body>
             </Card>
         </div>
     )
