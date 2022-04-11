@@ -12,7 +12,6 @@ const Products = () => {
         fetch("data.json")
             .then(res => res.json())
             .then(data => setProducts(data))
-
     }, [])
 
     const addToHandle = (product) => {

@@ -12,8 +12,10 @@ const Card = ({ carts, removeHandle, choosen, one }) => {
                         <table className='table table-success'>
                             <thead>
                                 <tr className='d-flex align-items-center w-100'>
-                                    <th scope="col">{cart.name}</th>
-                                    <img height="40px" width="50px" src={cart.img} alt="" />
+                                    <td>
+                                        <span>{cart.name}</span>
+                                        <img height="40px" width="50px" src={cart.img} alt="" />
+                                    </td>
                                 </tr>
                             </thead>
                         </table>
